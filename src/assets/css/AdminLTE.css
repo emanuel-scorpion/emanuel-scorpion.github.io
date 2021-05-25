@@ -18,6 +18,121 @@ body {
     height: 100%
 }
 
+.card {
+    box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);
+    margin-bottom: 1rem;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+.card-primary.card-tabs:not(.card-outline) .card-header {
+    background-color: #007bff
+}
+
+.card-primary.card-tabs:not(.card-outline) .card-header,
+.card-primary.card-tabs:not(.card-outline) .card-header a {
+    color: #fff
+}
+
+.card-primary.card-tabs:not(.card-outline) .card-header a.active {
+    color: #1f2d3d
+}
+
+.card-primary.card-tabs.card-outline {
+    border-top: 3px solid #007bff
+}
+
+.card-primary.card-outline-tabs .card-header a:hover {
+    border-top: 3px solid #dee2e6
+}
+
+.card-primary.card-outline-tabs .card-header a.active {
+    border-top: 3px solid #007bff
+}
+
+.bg-gradient-primary .btn-tool,
+.bg-primary .btn-tool,
+.card-primary:not(.card-outline) .btn-tool {
+    color: rgba(255, 255, 255, .8)
+}
+
+.bg-gradient-primary .btn-tool:hover,
+.bg-primary .btn-tool:hover,
+.card-primary:not(.card-outline) .btn-tool:hover {
+    color: #fff
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 0) calc(.25rem - 0) 0 0;
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+    padding: .75rem 1.25rem;
+    position: relative;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.titulo {
+    float: left;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 0 solid rgba(0, 0, 0, .125);
+}
+
+.card-title {
+    float: left;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.text-sm .card-title {
+    font-size: 1rem
+}
+
+.card-header>.card-tools {
+    float: right;
+    margin-right: -.625rem;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: border-box;
+}
+
+.card {
+    word-wrap: break-word;
+}
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
