@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>NEXA | Dashboard</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.2 -->
+    <link href="./src/assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./src/assets/css/adminlte.css" rel="stylesheet" type="text/css">
+    <!-- Font Awesome Icons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Theme style -->
+    <link href="./src/assets/css/AdminLTE.css" rel="stylesheet" type="text/css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+         folder instead of downloading all of them to reduce the load. -->
+    <link href="./src/assets/css/all-skins.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .jqstooltip {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            visibility: hidden;
+            background: rgb(0, 0, 0) transparent;
+            background-color: rgba(0, 0, 0, 0.6);
+            filter: progid: DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+            -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+            white-space: nowrap;
+            padding: 5px;
+            border: 1px solid white;
+            z-index: 10000;
+        }
+        
+        .jqsfield {
+            color: white;
+            font: 10px arial, san serif;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body class="skin-blue">
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <img style="float: right;margin-left: -10px; width: 50px;" src="./src/assets/imagenes/logoplomo.png" alt="">
+
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="./src/assets/imagenes/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Victor Tomanguilla</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar" style="height: auto;">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="./src/assets/imagenes/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p>Victor</p>
+
+                        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    </div>
+                </div>
+                <!-- search form -->
+
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    <li class="active treeview">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>PH</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>CONDUCTIVIDAD</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>TDS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>TSS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>CAUDAL</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>COBRE</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>PLOMO</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa fa-th"></i> <span>ZINC</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Right side column. Contains the navbar and content of the page -->
+        <div class="content-wrapper" style="min-height: 538px;background-color: #dbdbdb;">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <h1>
+                    Dashboard
+                    <small>Control panel</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li class="active">Dashboard</li>
+                </ol>
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <!-- AREA CHART -->
+                            <table>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="btn bnexa" style="margin-top: 5px;margin-bottom: 5px;">Primary</button></td>
+                                </tr>
+
+                            </table>
+
+
+                        </div>
+
+                        <div class="col-md-9">
+                            <!-- LINE CHART -->
+                            <div class="card card-success">
+                                <div class="card-header">
+                                    <h3 class="card-title">Variable</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="margin">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-default">Meses</button>
+                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                      </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">1 mes</a></li>
+                                                <li><a href="#">2 mes</a></li>
+                                                <li><a href="#">3 mes</a></li>
+
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                    <div class="chart">
+                                        <canvas id="areaChart" style="height:250px; min-height:250px"></canvas>
+                                    </div>
+                                </div>
+                                <!-- /.card-body -->
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </section>
+
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 0.1
+            </div>
+            <strong>2021 <a style="color: #ff5000;" href="http://pksoluciones.com/">PKAnalytics</a>.</strong> All rights reserved.
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery 2.1.3 -->
+    <script src="./src/assets/js/jQuery-2.js"></script>
+    <!-- jQuery UI 1.11.2 -->
+    <script src="./src/assets/js/jquery-ui.js" type="text/javascript"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script src="./src/assets/js/bootstrap.js" type="text/javascript"></script>
+    <!-- Sparkline -->
+    <script src="./src/assets/js/jquery.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script src="./src/assets/js/app.js" type="text/javascript"></script>
+
+    <script src="./src/assets/js/Chart.js"></script>
+    <!-- AdminLTE App -->
+    <script src="./src/assets/js/adminlte.js"></script>
+
+
+    <script>
+        $(function() {
+            /* ChartJS
+             * -------
+             * Here we will create a few charts using ChartJS
+             */
+
+            //--------------
+            //- AREA CHART -
+            //--------------
+
+            // Get context with jQuery - using jQuery's .get() method.
+            var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+
+            var areaChartData = {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'PH1',
+                    backgroundColor: 'rgba(184,184,184,0.9)',
+                    borderColor: 'rgba(255,80,0,0.8)',
+                    pointRadius: true,
+                    pointColor: '#3b8bba',
+                    pointStrokeColor: 'rgba(60,141,188,1)',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+                    data: [28, 48, 40, 19, 86, 27, 90]
+                }, {
+                    label: 'PH2',
+                    backgroundColor: 'rgba(255, 80, 0, 0.6)',
+                    borderColor: 'rgba(210, 214, 222, 1)',
+                    pointRadius: false,
+                    pointColor: 'rgba(210, 214, 222, 1)',
+                    pointStrokeColor: '#c1c7d1',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(220,220,220,1)',
+                    data: [65, 59, 80, 81, 56, 55, 40]
+                }, ]
+            }
+
+            var areaChartOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    display: false
+                },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            display: false,
+                        }
+                    }]
+                }
+            }
+
+            // This will get the first returned node in the jQuery collection.
+            var areaChart = new Chart(areaChartCanvas, {
+                type: 'line',
+                data: areaChartData,
+                options: areaChartOptions
+            })
+
+            //-------------
+            //- LINE CHART -
+            //--------------
+            var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
+            var lineChartOptions = jQuery.extend(true, {}, areaChartOptions)
+            var lineChartData = jQuery.extend(true, {}, areaChartData)
+            lineChartData.datasets[0].fill = false;
+            lineChartData.datasets[1].fill = false;
+            lineChartOptions.datasetFill = false
+
+            var lineChart = new Chart(lineChartCanvas, {
+                type: 'line',
+                data: lineChartData,
+                options: lineChartOptions
+            })
+
+
+            //-------------
+            //- LINE CHART -
+            //--------------
+            var lineChartCanvas2 = $('#lineChart2').get(0).getContext('2d')
+            var lineChartOptions2 = jQuery.extend(true, {}, areaChartOptions)
+            var lineChartData2 = jQuery.extend(true, {}, areaChartData)
+            lineChartData2.datasets[0].fill = false;
+            lineChartData2.datasets[1].fill = false;
+            lineChartOptions2.datasetFill = false
+
+            var lineChart2 = new Chart(lineChartCanvas2, {
+                type: 'line',
+                data: lineChartData2,
+                options: lineChartOptions2
+            })
+
+
+            //-------------
+            //- DONUT CHART -
+            //-------------
+            // Get context with jQuery - using jQuery's .get() method.
+            var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+            var donutData = {
+                labels: [
+                    'F',
+                    'E',
+                    'D',
+                    'C',
+                    'B',
+                    'A',
+                ],
+                datasets: [{
+                    data: [700, 500, 400, 600, 300, 100],
+                    backgroundColor: ['#dbdbdb', '#3c3c3c', '#ff5000', '#1e1e1e', '#f8c83e', '#c19f55'],
+                }]
+            }
+            var donutOptions = {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                }
+                //Create pie or douhnut chart
+                // You can switch between pie and douhnut using the method below.
+            var donutChart = new Chart(donutChartCanvas, {
+                type: 'doughnut',
+                data: donutData,
+                options: donutOptions
+            })
+
+            //-------------
+            //- PIE CHART -
+            //-------------
+            // Get context with jQuery - using jQuery's .get() method.
+            var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+            var pieData = donutData;
+            var pieOptions = {
+                    maintainAspectRatio: false,
+                    responsive: true,
+                }
+                //Create pie or douhnut chart
+                // You can switch between pie and douhnut using the method below.
+            var pieChart = new Chart(pieChartCanvas, {
+                type: 'pie',
+                data: pieData,
+                options: pieOptions
+            })
+
+            //-------------
+            //- BAR CHART -
+            //-------------
+            var barChartCanvas = $('#barChart').get(0).getContext('2d')
+            var barChartData = jQuery.extend(true, {}, areaChartData)
+            var temp0 = areaChartData.datasets[0]
+            var temp1 = areaChartData.datasets[1]
+            barChartData.datasets[0] = temp1
+            barChartData.datasets[1] = temp0
+
+            var barChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                datasetFill: false
+            }
+
+            var barChart = new Chart(barChartCanvas, {
+                type: 'bar',
+                data: barChartData,
+                options: barChartOptions
+            })
+
+            //---------------------
+            //- STACKED BAR CHART -
+            //---------------------
+            var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
+            var stackedBarChartData = jQuery.extend(true, {}, barChartData)
+
+            var stackedBarChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    xAxes: [{
+                        stacked: true,
+                    }],
+                    yAxes: [{
+                        stacked: true
+                    }]
+                }
+            }
+
+            var stackedBarChart = new Chart(stackedBarChartCanvas, {
+                type: 'bar',
+                data: stackedBarChartData,
+                options: stackedBarChartOptions
+            })
+        })
+    </script>
+
+
+</body>
+
+</html>
